@@ -1,6 +1,9 @@
 /*
  * colors variables
  */
+/*
+ * colors variables
+ */
 html, body {
   min-height: 100%;
   height: 100%;
@@ -12,6 +15,10 @@ html, body {
 html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
+}
+
+ul, li {
+  list-style: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,6 +47,10 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+a:hover {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-page {
@@ -92,9 +103,10 @@ input::-ms-input-placeholder {
 
 @font-face {
   font-family: 'health-icon';
-  src: url("../fonts/health-icon.eot?fvtb2l");
-  src: url("./../fonts/health-icon.eot?fvtb2l#iefix") format("embedded-opentype"), url("./../fonts/health-icon.ttf?fvtb2l") format("truetype"), url("./../fonts/health-icon.woff?fvtb2l") format("woff"), url("./../fonts/health-icon.svg?fvtb2l#health-icon") format("svg");
+  src: url("../fonts/health-icon.eot?l7yt0w");
+  src: url("fonts/health-icon.eot?l7yt0w#iefix") format("embedded-opentype"), url("../fonts/health-icon.ttf?l7yt0w") format("truetype"), url("../fonts/health-icon.woff?l7yt0w") format("woff"), url("../fonts/health-icon.svg?l7yt0w") format("svg");
   font-weight: normal;
+  font-style: normal;
 }
 
 i {
@@ -109,6 +121,16 @@ i {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left-arrow:before {
+  content: "\e940";
+  color: #515151;
+}
+
+.icon-rit-arrow2:before {
+  content: "\e941";
+  color: #515151;
 }
 
 .icon-case .path1:before {
@@ -476,6 +498,11 @@ i {
   color: #fff;
 }
 
+.app {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
 /*
  * colors variables
  */
@@ -493,7 +520,7 @@ i {
  * colors variables
  */
 .question .q-tit {
-  padding: 4.7% 4.7% 22.7%;
+  padding: 4% 4% 22%;
   background-image: linear-gradient(90deg, #26acff, #0088dc);
 }
 
@@ -517,8 +544,8 @@ i {
 }
 
 .question .q-choose {
-  padding: 4.7%;
-  margin: -12% 4.7% 0;
+  padding: 4%;
+  margin: -12% 4% 0;
   background-color: #fff;
   box-shadow: 0 0 9px 0px #dedcdc;
 }
@@ -531,7 +558,7 @@ i {
 
 .question .q-choose .choose-items .radio {
   position: relative;
-  padding: 3.3% 0;
+  padding: 3% 0;
   line-height: 3;
 }
 
@@ -573,7 +600,7 @@ i {
 }
 
 .question .q-choose .tool-btn .btn.next-btn {
-  padding: 4.7% 20%;
+  padding: 4% 20%;
   background-image: linear-gradient(90deg, #26acff, #0088dc);
   color: #fff;
   border: 0;

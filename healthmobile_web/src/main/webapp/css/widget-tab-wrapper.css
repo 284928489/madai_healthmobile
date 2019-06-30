@@ -17,6 +17,7 @@
   line-height: 3;
   text-align: center;
   border-right: 1px solid #e3e3e3;
+  cursor: pointer;
 }
 
 .tab-wrapper .tab-menu li:last-child {

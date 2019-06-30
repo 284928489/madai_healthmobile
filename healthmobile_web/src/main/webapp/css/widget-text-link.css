@@ -2,21 +2,22 @@
  * colors variables
  */
 .text-link {
-  padding: 2%;
+  padding: 0;
 }
 
 .text-link .list-box {
-  margin-right: -4%;
-  margin-bottom: -10px;
-  overflow: auto;
+  padding: 2% 0 0 2%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .text-link .list-box li {
-  width: 46%;
-  height: 180px;
-  margin: 0 4% 10px 0;
+  list-style-type: none;
+  width: 48%;
+  height: 200px;
+  margin-bottom: 10px;
+  margin-right: 2%;
   background-color: #fff;
-  float: left;
   display: table;
   text-align: center;
 }
