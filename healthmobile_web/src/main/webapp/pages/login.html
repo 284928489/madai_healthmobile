@@ -43,10 +43,10 @@
                             <input v-model="loginInfo.validateCode" style="width:80%" id='password' type="password" placeholder="请输入验证码">
                         </div>
                     </div>
-                    <div class="input-row" style="font-size: 12px">
-                        <input type="checkbox" checked>
-                        阅读并同意《传智健康用户协议》《传智健康隐私条款》
-                    </div>
+                    <span class="input-row" style="font-size: 12px">
+                        <input type="checkbox" id="cbox1" checked>
+                                阅读并同意《传智健康用户协议》《传智健康隐私条款》
+                    </span>
                     <div class="btn yes-btn"><a @click="login()" href="#">登录</a></div>
                 </form>
             </div>
@@ -86,7 +86,7 @@
                     axios.post("/login/check.do",this.loginInfo).then((response) => {
                         if(response.data.flag){
                             //登录成功,跳转到index.html
-                            window.location.href="index.html";
+                            window.location.href="/";
                         }else{
                             //失败，提示失败信息
                             this.$message.error(response.data.message);
