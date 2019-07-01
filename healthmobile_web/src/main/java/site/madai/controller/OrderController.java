@@ -57,7 +57,7 @@ public class OrderController {
      * @param map
      * @return
      */
-    @RequestMapping("/submit")
+    @RequestMapping("submit")
     public Result submitOrder(@RequestBody Map map){
         String telephone = (String) map.get("telephone");
         //从Redis中获取缓存的验证码，key为手机号+RedisConstant.SENDTYPE_ORDER
