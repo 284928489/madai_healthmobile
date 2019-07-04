@@ -25,25 +25,25 @@ public class SetmealController {
     private SetmealService setmealService;
 
     @RequestMapping("getAllSetmeal")
-    public Result getAllSetmeal(){
+    public Result getAllSetmeal() {
         try {
             List<Setmeal> setmealList = setmealService.getAllSetmeal();
             return new Result(true, MessageConstant.GET_SETMEAL_LIST_SUCCESS,
                     setmealList);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            return new Result(false,MessageConstant.GET_SETMEAL_LIST_FAIL);
+            return new Result(false, MessageConstant.GET_SETMEAL_LIST_FAIL);
         }
     }
 
     @RequestMapping("findSetmealById")
-    public Result findSetmealById(Integer id){
-        try{
+    public Result findSetmealById(Integer id) {
+        try {
             Setmeal setmeal = setmealService.findSetmealByIdformobile(id);
-            return new Result(true,MessageConstant.QUERY_SETMEAL_SUCCESS,setmeal);
-        }catch (Exception e){
+            return new Result(true, MessageConstant.QUERY_SETMEAL_SUCCESS, setmeal);
+        } catch (Exception e) {
             e.printStackTrace();
-            return new Result(false,MessageConstant.QUERY_SETMEAL_FAIL);
+            return new Result(false, MessageConstant.QUERY_SETMEAL_FAIL);
         }
     }
 
