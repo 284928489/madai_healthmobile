@@ -57,8 +57,10 @@ public class LoginController {
             //登录成功
             //写入Cookie，跟踪用户
             Cookie cookie = new Cookie("login_member_telephone", telephone);
-            cookie.setPath("/");//路径
-            cookie.setMaxAge(60 * 60 * 24 * 30);//有效期30天
+            //路径
+            cookie.setPath("/");
+            //有效期30天
+            cookie.setMaxAge(60 * 60 * 24 * 30);
             response.addCookie(cookie);
             return new Result(true, MessageConstant.LOGIN_SUCCESS);
         }

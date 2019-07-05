@@ -28,7 +28,8 @@ public class ValidateCodeController {
     //体检预约时发送手机验证码
     @RequestMapping("send4Order")
     public Result send4Order(String telephone) {
-        Integer code = ValidateCodeUtils.generateValidateCode(4);//生成4位数字验证码
+        //生成4位数字验证码
+        Integer code = ValidateCodeUtils.generateValidateCode(4);
         try {
             //发送短信
             SMSUtils.sendShortMessage(SMSUtils.VALIDATE_CODE, telephone, code.toString());
@@ -48,7 +49,8 @@ public class ValidateCodeController {
     //手机快速登录时发送手机验证码
     @RequestMapping("send4Login")
     public Result send4Login(String telephone) {
-        Integer code = ValidateCodeUtils.generateValidateCode(6);//生成6位数字验证码
+        //生成6位数字验证码
+        Integer code = ValidateCodeUtils.generateValidateCode(6);
         try {
             //发送短信
             SMSUtils.sendShortMessage(SMSUtils.VALIDATE_CODE, telephone, code.toString());
